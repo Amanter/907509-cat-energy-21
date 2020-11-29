@@ -2,6 +2,7 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -12,19 +13,19 @@
         <a class="page-header__logo">
           <img src="https://via.placeholder.com/150x150" alt="Логотип Cat Energy">
         </a>
-        <nav class="main-nav">
+        <nav class="main-nav main-nav--closed">
           <button class="main-nav__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
           <ul class="main-nav__list">
             <li class="main-nav__item main-nav__item--active">
-              <a class="link">Главная</a>
+              <a class="main-nav__link link">Главная</a>
             </li>
             <li class="main-nav__item">
-              <a class="link" href="catalog.html">Каталог продукции</a>
+              <a class="main-nav__link link" href="catalog.html">Каталог продукции</a>
             </li>
             <li class="main-nav__item">
-              <a class="link" href="form.html">Подбор программы</a>
+              <a class="main-nav__link link" href="form.html">Подбор программы</a>
             </li>
           </ul>
         </nav>
@@ -76,35 +77,29 @@
         </div>
       </section>
       <section class="living-example">
-        <div class="living-example__wrapper backgound-primary">
-          <h2 class="living_example__title">Живой пример</h2>
-          <p class="living_example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок!
+        <div class="living-example__wrapper">
+          <h2 class="living-example__title">Живой пример</h2>
+          <p class="living-example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок!
             При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
           </p>
-          <ul class="living_example__list">
-            <li class="living_example__item">
-              <p class="living_example__weight living-example-measure">5 кг</p>
+          <ul class="living-example__list">
+            <li class="living-example__item">
+              <p class="living_example__value">5 кг</p>
+              <p class="living-example__label">снижение веса</p>
             </li>
-            <li class="living_example__item">
-              <p class="living_example__time living-example-measure">60 дней</p>
-            </li>
-          </ul>
-          <ul class="living_example__list">
-            <li class="living_example__item">
-              <p class="living_example__time_spent living-example-result">затрачено времени</p>
-            </li>
-            <li class="living_example__item">
-              <p class="living_example__weight-loss living-example-result">снижение веса</p>
+            <li class="living-example__item">
+              <p class="living_example__value">60 дней</p>
+              <p class="living-example__label">затрачено времени</p>
             </li>
           </ul>
-          <p class="living_example__price">Затраты на питание: 15 000 руб.</p>
+          <p class="living-example__price">Затраты на питание: 15 000 руб.</p>
           <img src="https://via.placeholder.com/150x150" alt="Динамическое изменение массы кота">
-          <div class="living_example__range-controls">
-            <p class="living_example__cat-before cat-result">Было</p>
-            <div class="living_example__scale">
-              <div class="living_example__bar living_example__bar--toggle"></div>
+          <div class="living-example__range-controls">
+            <p class="living-example__cat living-example__cat--before">Было</p>
+            <div class="living-example__scale">
+              <div class="living-example__bar living-example__bar--toggle"></div>
             </div>
-            <p class="living_example__cat-after cat-result">Стало</p>
+            <p class="living-example__cat living-example__cat--after">Стало</p>
           </div>
         </div>
       </section>
@@ -120,10 +115,8 @@
       </section>
     </main>
     <footer class="page-footer">
-      <div class="page-footer__wrapper backgound-primary">
-        <div class="page-footer__info">
-          <div class="page-footer__logo"></div>
-        </div>
+      <div class="page-footer__wrapper">
+        <a class="page-footer__logo"></a>
         <div class="page-footer__social social">
           <ul class="social__list">
             <li class="social__item">

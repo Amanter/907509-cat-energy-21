@@ -3,10 +3,18 @@
 }
 
 .map-adress__cooperation {
-  .set-font(@font-value: 16px);
+  .set-font(16px);
   text-transform: uppercase;
+
+  @media @tablet {
+    .set-font(20px, 21px);
+  }
 }
 
 .map-adress__text-adress {
   .set-font(@font-primary: "Arial");
+
+  @media @tablet {
+    .set-font(16px, 20px);
+  }
 }

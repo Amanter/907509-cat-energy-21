@@ -3,7 +3,11 @@
 }
 
 .advantages__title {
-  .set-font(@font-value: 24px; @line-height-value: 37px);
+  .set-font(24px, 37px);
+
+  @media @tablet {
+    .set-font(36px, 36px);
+  }
 }
 
 .advantages__item {
@@ -11,10 +15,18 @@
   background-color: @basic-primary-grey;
 }
 
-.advantages__link {
-  .set-font(@font-value: 16px; @line-height-value: 16px);
-}
-
 .advantages__description {
   .set-font(@font-primary: "Arial");
+
+  @media @tablet {
+    .set-font(16px, 24px, "Arial");
+  }
+}
+
+.advantages__link {
+  .set-font(16px, 16px);
+
+  @media @tablet {
+    .set-font(20px, 20px);
+  }
 }

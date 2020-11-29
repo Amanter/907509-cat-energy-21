@@ -3,11 +3,19 @@
 }
 
 .working-result__title {
-  .set-font(@font-value: 36px; @line-height-value: 40px);
+  .set-font(36px, 40px);
+
+  @media @tablet {
+    .set-font(60px, 60px);
+  }
 }
 
 .working-result__description {
   .set-font(@font-primary: "Arial");
+
+  @media @tablet {
+    .set-font(16px, 24px);
+  }
 }
 
 .working-result__item {
