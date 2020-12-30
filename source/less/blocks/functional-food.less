@@ -1,36 +1,119 @@
-.functional-food {
-  background-color: @basic-green;
-}
-
 .functional-food__wrapper {
   .wrapper();
+  position: relative;
+
+  @media @desktop {
+    display: flex;
+  }
 }
 
+.functional-food__title-container {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 320px;
+    height: 302px;
+    z-index: -1;
+    background: url("../img/index-background-desktop.png") 50% 50% no-repeat;
+
+    @media @tablet {
+      opacity: 0;
+    }
+
+    @media @desktop {
+      opacity: 1;
+      top: 0;
+      left: 78%;
+      width: 320px;
+      height: 302px;
+    }
+  }
+}
+
+
 .functional-food__title {
+  padding-top: 29px;
+  margin: 0;
+  text-align: center;
   .set-font(36px, 36px);
   color: @basic-white;
 
   @media @tablet {
+    margin: 0;
+    width: 510px;
+    padding-top: 66px;
     .set-font(60px, 60px);
     color: @basic-dark;
+    text-align: left;
+    padding-left: 88px;
+  }
+
+  @media @desktop {
+    padding-top: 115px;
+    padding-left: 80px;
+    width: 500px;
   }
 }
 
 .functional-food__activity {
   .set-font(@line-height-value: 14px);
-  color: @basic-dark;
+  color: @basic-white;
+  padding-left: 40px;
+  padding-top: 10px;
+  text-transform: uppercase;
 
   @media @tablet {
+    margin: 0;
+    padding: 41px 0 10px 88px;
     .set-font(20px, 20px);
     color: @basic-dark;
+  }
+
+  @media @desktop {
+    width: 500px;
+    padding-left: 80px;
+    padding-top: 43px;
+  }
+}
+
+.functional-food__can-img {
+  padding-top: 5px;
+
+  @media @tablet {
+    width: 709px;
+    height: 609px;
+  }
+
+  @media @desktop {
+    width: 500px;
+    height: 531px;
+    margin-bottom: 131px;
   }
 }
 
 .functional-food__link {
-  color: @basic-white;
+  margin-bottom: 22px;
+  margin-top: 27px;
+  font-size: 14px;
+
 
   @media @tablet {
-    .set-font(20px, 20px);
+    position: absolute;
+    padding-top: 16px;
+    padding-bottom: 16px;
     width: 244px;
+    content: "";
+    top: 31.1%;
+    left: 14.6%;
+    .set-font(20px, 20px);
+  }
+
+  @media @desktop {
+    top: 48.6%;
+    left: 13.2%;
   }
 }

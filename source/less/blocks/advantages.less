@@ -2,31 +2,161 @@
   .wrapper();
 }
 
+.advantages__list {
+  .reset-style-list();
+
+  @media @tablet {
+    margin-top: 7px;
+  }
+
+  @media @desktop {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
 .advantages__title {
+  padding-top: 10px;
+  padding-left: 71px;
+  text-transform: uppercase;
+  margin: 0;
   .set-font(24px, 37px);
 
   @media @tablet {
+    padding-top: 58px;
+    padding-left: 3px;
     .set-font(36px, 36px);
+  }
+
+  @media @desktop {
+    padding-left: 164px;
+  }
+
+  &--slimming::before {
+    position: absolute;
+    content: "";
+    top: 21px;
+    left: 22px;
+    width: 50px;
+    height: 53px;
+    background: url("../img/cat-back-mobile.svg") 50% 50% no-repeat;
+
+    @media @tablet {
+      right: 22px;
+    }
+  }
+
+  &--weight::before {
+    position: absolute;
+    content: "";
+    top: 24px;
+    left: 13px;
+    width: 67px;
+    height: 50px;
+    background: url("../img/cat-long-back-mobile.svg") 50% 50% no-repeat;
+
+    @media @tablet {
+      right: 22px;
+    }
   }
 }
 
 .advantages__item {
+  margin-bottom: 20px;
+  position: relative;
   list-style: none;
   background-color: @basic-primary-grey;
+  padding: 20px;
+
+  @media @tablet {
+    padding-left: 50px;
+    padding-bottom: 60px;
+    margin-bottom: 30px;
+  }
+
+  @media @desktop {
+    width: 570px;
+    min-height: 374px;
+  }
 }
 
 .advantages__description {
+  position: relative;
+  margin: 0;
+  padding-top: 31px;
+  padding-bottom: 40px;
   .set-font(@font-primary: "Arial");
 
+  &::before {
+    position: absolute;
+    content: "";
+    bottom: 11.3%;
+    left: 0;
+    width: 240px;
+    border-bottom: 1px solid @basic-primary-border;
+
+    @media @tablet {
+      border: none;
+    }
+  }
+
   @media @tablet {
+    padding: 24px 0 57px 3px;
+    margin: 0;
     .set-font(16px, 24px, "Arial");
+  }
+
+  @media @desktop {
+    padding-top: 73px;
+    padding-bottom: 32px;
+  }
+}
+
+.advantages-description--slimming {
+  @media @tablet {
+    width: 385px;
+  }
+
+  @media @desktop {
+    width: 465px;
+  }
+}
+
+.advantages-description--weight {
+  @media @tablet {
+    width: 345px;
+  }
+
+  @media @desktop {
+    width: 460px;
   }
 }
 
 .advantages__link {
+  width: 130px;
   .set-font(16px, 16px);
 
   @media @tablet {
+    padding-left: 3px;
     .set-font(20px, 20px);
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    bottom: 9%;
+    left: 42.7%;
+    background: url("../img/icon-arrow.svg") 50% 50% no-repeat;
+    width: 24px;
+    height: 12px;
+
+    @media @tablet {
+      left: 25.9%;
+      bottom: 17.8%;
+    }
+
+    @media @desktop {
+      left: 32.4%;
+    }
   }
 }

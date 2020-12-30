@@ -3,21 +3,145 @@
 }
 
 .working-result__title {
+  margin: 0;
+  padding-top: 8px;
+  padding-bottom: 40px;
   .set-font(36px, 40px);
 
   @media @tablet {
+    padding-top: 15px;
+    padding-bottom: 25px;
     .set-font(60px, 60px);
+  }
+
+  @media @desktop {
+    padding-top: 42px;
+  }
+}
+
+.working-result__list {
+  .reset-style-list();
+  position: relative;
+  padding-bottom: 20px;
+
+  @media @tablet {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 16px;
+  }
+
+  @media @desktop {
+    display: flex;
+    justify-content: space-between;
   }
 }
 
 .working-result__description {
+  margin: 0;
   .set-font(@font-primary: "Arial");
 
   @media @tablet {
-    .set-font(16px, 24px);
+    padding-top: 158px;
+    .set-font(16px, 24px, "Arial");
   }
 }
 
 .working-result__item {
   list-style: none;
+  padding-bottom: 26px;
+  padding-left: 80px;
+  position: relative;
+  width: 280px;
+
+  @media @tablet {
+    padding-left: 0;
+    margin-bottom: 61px;
+  }
+
+  &--nutriteous {
+    @media @tablet {
+      width: 210px;
+    }
+
+    @media @desktop {
+      width: 360px;
+      padding-right: 55px;
+    }
+  }
+
+  &--nutriteous::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: -2%;
+    background: url("../img/icon-green-leaf.svg") 50% 50% no-repeat;
+    width: 60px;
+    height: 60px;
+  }
+
+  &--powder {
+    @media @tablet {
+      width: 254px;
+      padding-left: 29px;
+    }
+
+    @media @desktop {
+      width: 360px;
+      padding-left: 17px;
+      padding-right: 13px;
+    }
+  }
+
+  &--powder::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: -2%;
+    background: url("../img/icon-green-wash.svg") 50% 50% no-repeat;
+    width: 60px;
+    height: 60px;
+  }
+
+  &--replacement {
+    @media @tablet {
+      width: 260px;
+    }
+
+    @media @desktop {
+      width: 360px;
+      padding-left: 40px;
+    }
+  }
+
+  &--replacement::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: -2%;
+    background: url("../img/icon-green-fork.svg") 50% 50% no-repeat;
+    width: 60px;
+    height: 60px;
+  }
+
+  &--change {
+    @media @tablet {
+      width: 290px;
+      padding-left: 29px;
+    }
+
+    @media @desktop {
+      width: 360px;
+      padding-left: 62px;
+    }
+  }
+
+  &--change::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: -2%;
+    background: url("../img/icon-green-clock.svg") 50% 50% no-repeat;
+    width: 60px;
+    height: 60px;
+  }
 }

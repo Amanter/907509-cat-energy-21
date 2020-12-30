@@ -1,0 +1,75 @@
+.additional-goods-order__wrapper {
+  .wrapper();
+
+  @media @desktop {
+    position: relative;
+  }
+}
+
+.additional-goods-order__text {
+  display: inline-flex;
+  padding-top: 226px;
+  width: 220px;
+  padding-left: 56px;
+  margin: 0;
+  .set-font(16px, 20px, "Arial");
+  color: @basic-white;
+  text-align: center;
+
+  @media @tablet {
+    padding-top: 139px;
+    width: 597px;
+    padding-left: 423px;
+    text-align: start;
+  }
+
+  @media @desktop {
+    padding-top: 252px;
+    padding-left: 23px;
+    width: 206px;
+    text-align: center;
+  }
+}
+
+.additional-goods-order__background {
+  position: relative;
+  min-height: 328px;
+  margin-bottom: 36px;
+
+
+  @media @tablet {
+    width: 708px;
+    min-height: 200px;
+    margin-bottom: 143px;
+  }
+
+  @media @desktop {
+    position: absolute;
+    right: -25%;
+    bottom: 129px;
+    margin-bottom: 0;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 40px;
+    width: 280px;
+    height: 289px;
+    background: url("../img/gift-photo-mobile.png") 50% 50% no-repeat;
+    z-index: -1;
+
+    @media @tablet {
+      top: 67px;
+      width: 100%;
+      height: 200px;
+      background-size: cover;
+    }
+
+    @media @desktop {
+      width: 245px;
+      height: 289px;
+      background-size: cover;
+    }
+  }
+}
