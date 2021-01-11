@@ -171,6 +171,10 @@
   @media @desktop {
     padding-bottom: 10px;
   }
+
+  &-border {
+    border-bottom: 2px solid @basic-white;
+  }
 }
 
 .main-nav--closed .main-nav__item {
@@ -194,5 +198,23 @@
 
   @media @desktop {
     .set-font(20px, 20px);
+  }
+}
+
+.main-nav__link--color {
+  @media @desktop {
+    color: @basic-white;
+  }
+
+  &:hover {
+    @media @desktop {
+      color: @basic-white-hover-special;
+    }
+  }
+
+  &:active {
+    @media @desktop {
+      color: @basic-white-hover;
+    }
   }
 }

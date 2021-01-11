@@ -19,14 +19,14 @@
             <span class="visually-hidden">Открыть меню</span>
           </button>
           <ul class="main-nav__list">
-            <li class="main-nav__item main-nav__item--active">
-              <a class="main-nav__link link">Главная</a>
+            <li class="main-nav__item main-nav__item--active main-nav__item--active-border">
+              <a class="main-nav__link main-nav__link--color link">Главная</a>
             </li>
             <li class="main-nav__item">
-              <a class="main-nav__link link" href="catalog.html">Каталог продукции</a>
+              <a class="main-nav__link main-nav__link--color link" href="catalog.html">Каталог продукции</a>
             </li>
             <li class="main-nav__item">
-              <a class="main-nav__link link" href="form.html">Подбор программы</a>
+              <a class="main-nav__link main-nav__link--color link" href="form.html">Подбор программы</a>
             </li>
           </ul>
         </nav>
@@ -39,7 +39,11 @@
             <h2 class="functional-food__title">Функциональное питание для котов</h2>
             <p class="functional-food__activity">Занялся собой? займись котом!</p>
           </div>
-          <img class="functional-food__can-img" src="img/index-can.png" width="280" height="270" alt="Банка корма для котов Cat Energy">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/index-can-desktop.png 1x, img/index-can-desktop-2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/index-can-tablet.png 1x, img/index-can-tablet-2x.png 2x">
+            <img class="functional-food__can-img" src="img/index-can-mobile.png" srcset="img/index-can-mobile-2x.png 2x" width="280" height="270" alt="Банка корма для котов Cat Energy">
+          </picture>
           <a class="functional-food__link product-link" href="form.html">Подобрать программу</a>
         </div>
       </section>
@@ -50,12 +54,12 @@
             <li class="advantages__item advantages__item--slimming">
               <h3 class="advantages__title advantages__title--slimming">Похудение</h3>
               <p class="advantages__description advantages-description--slimming">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-              <a class="advantages__link link" href="#">Каталог slim</a>
+              <a class="advantages__link link" href="catalog.html">Каталог slim</a>
             </li>
             <li class="advantages__item advantages__item--weight-up">
               <h3 class="advantages__title advantages__title--weight">Набор массы</h3>
               <p class="advantages__description advantages-description--weight">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
-              <a class="advantages__link link" href="#">Каталог pro</a>
+              <a class="advantages__link link" href="catalog.html">Каталог pro</a>
             </li>
           </ul>
         </div>
@@ -101,7 +105,20 @@
             </div>
           </div>
           <div class="living-example__cat-container">
-            <img class="living-example__img" src="../img/cat-fat.png" width="311" height="232" alt="Динамическое изменение массы кота">
+            <div class="living-example__two-cats">
+              <div class="living-example__cat-left living-example__cat-location">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="img/cat-fat-tablet.png 1x, img/cat-fat-tablet-2x.png 2x">
+                  <img class="living-example__cat-fat" src="img/cat-fat-mobile.png" srcset="img/cat-fat-mobile-2x.png 2x" width="311" height="502" alt="Динамическое изменение массы кота">
+                </picture>
+              </div>
+              <div class="living-example__cat-right living-example__cat-location">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="img/cat-skinny-tablet.png 1x, img/cat-skinny-tablet-2x.png 2x">
+                  <img class="living-example__cat-skinny" src="img/cat-skinny-mobile.png" srcset="img/cat-skinny-mobile-2x.png 2x" width="311" height="510" alt="Динамическое изменение массы кота">
+                </picture>
+              </div>
+            </div>
             <div class="living-example__range-controls">
               <p class="living-example__cat living-example__cat--before">Было</p>
               <div class="living-example__scale">
@@ -113,7 +130,7 @@
         </div>
       </section>
       <section class="map-adress">
-        <div class="map-adress__wrapper">
+        <div class="map-adress__wrapper map-adress--background">
           <h3 class="visually-hidden">Адресс и карта расположения магазина</h3>
           <address class="map-adress__info">
             <div class="map-adress__container">
@@ -121,7 +138,11 @@
               <p class="map-adress__text-adress">ул. Большая Конюшенная, д. 19/8 <span class="map-adress__piter">Санкт-Петербург</span></p>
           </div>
           </address>
-          <img class="map-adress__map" src="img/map-mobile.png" width="320" height="362" alt="Наше расположение на карте">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/map-desktop.png 1x, img/map-desktop-2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/map-tablet.png 1x, img/map-tablet-2x.png 2x">
+            <img class="map-adress__map" src="img/map-mobile.png" srcset="img/map-mobile-2x.png 2x" width="320" height="362" alt="Наше расположение на карте">
+          </picture>
           <iframe class="map-adress__map-interactive" src="" frameborder="0"></iframe>
         </div>
       </section>

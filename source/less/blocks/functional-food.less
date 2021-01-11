@@ -10,15 +10,25 @@
 .functional-food__title-container {
   position: relative;
 
+  @media @desktop {
+    margin-bottom: 364px;
+  }
+
   &::before {
     position: absolute;
     content: "";
     top: 0;
-    left: 0;
+    left: -20px;
     width: 320px;
-    height: 302px;
+    height: 304px;
     z-index: -1;
-    background: url("../img/index-background-desktop.png") 50% 50% no-repeat;
+    background-image: url("../img/index-background-mobile.jpg");
+    background-color: @special-green;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index-background-mobile-2x.jpg");
+      background-size: cover;
+    }
 
     @media @tablet {
       opacity: 0;
@@ -26,14 +36,18 @@
 
     @media @desktop {
       opacity: 1;
-      top: 0;
-      left: 78%;
-      width: 320px;
-      height: 302px;
+      top: -35.3%;
+      left: 122%;
+      width: 720px;
+      height: 696px;
+      background-image: url("../img/index-background-desktop.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/index-background-desktop-2x.jpg");
+      }
     }
   }
 }
-
 
 .functional-food__title {
   padding-top: 29px;
@@ -76,28 +90,28 @@
   @media @desktop {
     width: 500px;
     padding-left: 80px;
-    padding-top: 43px;
+    padding-top: 42px;
   }
 }
 
 .functional-food__can-img {
-  padding-top: 5px;
+  padding-top: 16px;
 
   @media @tablet {
+    padding-top: 10px;
     width: 709px;
-    height: 609px;
+    height: 619px;
   }
 
   @media @desktop {
-    width: 500px;
-    height: 531px;
-    margin-bottom: 131px;
+    width: 547px;
+    height: 509px;
+    transform: translate(-49px, 25px);
   }
 }
 
 .functional-food__link {
   margin-bottom: 22px;
-  margin-top: 27px;
   font-size: 14px;
 
 
@@ -107,13 +121,13 @@
     padding-bottom: 16px;
     width: 244px;
     content: "";
-    top: 31.1%;
+    top: 33.8%;
     left: 14.6%;
     .set-font(20px, 20px);
   }
 
   @media @desktop {
-    top: 48.6%;
+    top: 52%;
     left: 13.2%;
   }
 }
