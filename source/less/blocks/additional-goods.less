@@ -1,3 +1,31 @@
+.additional-goods {
+  position: relative;
+
+  @media @mobile-width-only {
+    overflow: hidden;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 65px;
+    right: -58.2%;
+    height: 1px;
+    width: 100%;
+    border-top: 2px solid @basic-green;
+    z-index: -1;
+
+    @media @tablet {
+      top: 9%;
+      right: 0;
+    }
+
+    @media @desktop {
+      top: 21px;
+    }
+  }
+}
+
 .additional-goods__wrapper {
   .wrapper();
 }
@@ -6,63 +34,38 @@
   position: relative;
   margin: 0;
   .set-font(24px, 24px);
-  padding-top: 27px;
+  padding-top: 51px;
   padding-bottom: 34px;
 
   @media @tablet {
-    padding: 68px 0 80px 38px;
+    margin-top: -143px;
+    padding: 68px 0 80px;
     .set-font(36px, 36px);
   }
 
   @media @desktop {
     padding-left: 0;
     padding-top: 0;
+    padding-bottom: 77px;
     margin-top: -66px;
+    margin-left: -37px;
   }
+}
 
-  &::before {
-    position: absolute;
-    content: "";
-    top: 49%;
-    right: -7%;
-    height: 1px;
-    width: 52px;
-    border-top: 2px solid @basic-green;
+.additional-goods__title-text {
+  background-color: @basic-white;
+  padding-right: 20px;
 
-    @media @tablet {
-      top: 50%;
-      left: -4.2%;
-      width: 30px;
-    }
-
-    @media @desktop {
-      top: 20.1%;
-      left: -8.9%;
-      width: 68px;
-    }
+  @media @tablet {
+    padding-right: 37px;
+    padding-left: 37px;
   }
+}
 
-  &::after {
-    position: absolute;
-    content: "";
-    bottom: -2%;
-    left: 0;
-    height: 1px;
-    width: 280px;
-    border-top: 1px solid @basic-grey;
-
-    @media @tablet {
-      top: 50%;
-      left: 58.1%;
-      width: 327px;
-      border-top: 2px solid @basic-green;
-    }
-
-    @media @desktop {
-      top: 20.1%;
-      left: 30.5%;
-      width: 78.5%;
-    }
+.additional-goods__list-container {
+  @media @desktop {
+    display: flex;
+    justify-content: space-between;
   }
 }
 
@@ -97,7 +100,6 @@
   @media @desktop {
     border: 0;
     width: 895px;
-    margin-bottom: 96px;
   }
 }
 
@@ -188,5 +190,106 @@
     height: 40px;
     margin: 16px 0 0 0;
     width: auto;
+  }
+}
+
+.additional-goods--border {
+  position: relative;
+
+  @media @desktop {
+    &::after {
+      position: absolute;
+      content: "";
+      bottom: -15%;
+      left: 0;
+      height: 1px;
+      width: 100.4%;
+      border-bottom: 1px solid @basic-grey;
+    }
+  }
+}
+
+.additional-goods__text {
+  display: inline-flex;
+  padding-top: 187px;
+  width: 220px;
+  padding-left: 56px;
+  margin: 0;
+  .set-font(16px, 20px, "Arial");
+  color: @basic-white;
+  text-align: center;
+
+  @media @tablet {
+    padding-top: 72px;
+    width: 597px;
+    padding-left: 423px;
+    text-align: start;
+  }
+
+  @media @desktop {
+    padding-top: 186px;
+    padding-left: 37px;
+    width: 206px;
+    text-align: center;
+  }
+}
+
+.additional-goods__background {
+  position: relative;
+  min-height: 328px;
+  margin-bottom: -5px;
+  margin-top: 57px;
+  background-image: url("../img/gift-photo-mobile.jpg");
+  background-repeat: no-repeat;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/gift-photo-mobile-2x.jpg");
+  }
+
+  @media @tablet {
+    width: 708px;
+    min-height: 200px;
+    margin-bottom: 76px;
+    margin-top: 67px;
+    background-size: cover;
+    background-image: url("../img/gift-photo-tablet.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/gift-photo-tablet-2x.jpg");
+    }
+  }
+
+  @media @desktop {
+    width: 245px;
+    min-height: 289px;
+    margin-bottom: 85px;
+    margin-top: 2px;
+    background-image: url("../img/gift-photo-desktop.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/gift-photo-desktop-2x.jpg");
+    }
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 18%;
+    left: 36.5%;
+    width: 69px;
+    height: 69px;
+    background-image: url("../img/icon-gift.svg");
+
+    @media @tablet {
+      top: 29.5%;
+      left: 11.2%;
+      width: 75px;
+      height: 75px;
+    }
+
+    @media @desktop {
+      top: 19.5%;
+      left: 35%;
+    }
   }
 }

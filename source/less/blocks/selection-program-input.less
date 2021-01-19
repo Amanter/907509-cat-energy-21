@@ -1,0 +1,29 @@
+.selection-program-input {
+  height: 45px;
+  border: 1px solid @basic-grey-border;
+  text-transform: uppercase;
+  margin-left: 11px;
+  padding-left: 15px;
+  margin-top: 14px;
+
+  @media @tablet {
+    margin-left: 15px;
+  }
+
+  &::placeholder {
+    color: @basic-dark;
+    .set-font(16px, 18px);
+
+    @media @tablet {
+      .set-font(20px, 20px);
+    }
+  }
+
+  &:hover {
+    border: 1px solid @special-primary-grey;
+  }
+
+  &:focus {
+    border: 2px solid @basic-dark;
+  }
+}

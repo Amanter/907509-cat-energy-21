@@ -1,12 +1,13 @@
-
-.product-catalog-show {
+.product-catalog__list .product-catalog-show {
   display: flex;
   flex-direction: column;
+  z-index: 2;
 
   @media @tablet {
     border: 2px solid @basic-primary-grey;
     width: 324px;
     align-items: center;
+    background-color: @basic-white;
   }
 
   @media @desktop {
@@ -78,10 +79,9 @@
 .product-catalog-show__link {
   position: relative;
   .set-font(16px, 20px);
-  background-color: @basic-grey;
+  background-color: @basic-primary-grey;
   color: @basic-dark;
   margin-top: 19px;
-  margin-bottom: 24px;
 
   @media @tablet {
     width: 249px;
@@ -104,5 +104,13 @@
     @media @tablet {
       display: none;
     }
+  }
+
+  &:hover {
+    background-color: @basic-grey;
+  }
+
+  &:active {
+    color: rgba(0, 0, 0, 0.3);
   }
 }

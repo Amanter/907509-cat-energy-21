@@ -14,7 +14,7 @@
   @media @tablet {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    min-height: 150px;
+    min-height: 153px;
   }
 }
 
@@ -22,49 +22,106 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 92px;
+  min-height: 83px;
+  padding-top: 25px;
 
   @media @tablet {
     justify-content: start;
+    padding-top: 0;
   }
 }
 
-.page-footer__social {
-  border-top: 1px solid @basic-primary-border;
+.page-footer__img-logo {
+  width: 128px;
+  height: 24px;
 
-  @media @tablet {
-    border: 0;
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
   }
 }
 
 .social__list {
-  min-height: 62px;
-  .reset-style-list();
   display: flex;
-  padding-left: 70px;
+  padding-left: 26px;
+  padding-top: 17px;
   align-items: center;
   flex-wrap: wrap;
+  border-top: 1px solid @basic-primary-border;
+  min-height: 48px;
+  justify-content: center;
+  list-style: none;
+
 
   @media @tablet {
     height: 100%;
     padding-left: 42px;
+    padding-top: 46px;
+    align-items: stretch;
+    border: 0;
+  }
+
+  @media @desktop {
+    padding-top: 49px;
   }
 }
 
 .social__link {
   margin-right: 33px;
+
+  @media @tablet {
+    margin-right: 0;
+  }
 }
 
-.social__link--vkontakte {
-  width: 29px;
-  height: 17px;
+.social__svg {
+  &:hover {
+    color: @basic-green;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.social__svg--vk {
+  height: 16px;
+  width: 23px;
+
+  @media @tablet {
+    margin-right: 26px;
+    height: 22px;
+    width: 30px;
+  }
+}
+
+.social__svg--insta {
+  height: 16px;
+  width: 16px;
+
+  @media @tablet {
+    margin-right: 21px;
+    height: 23px;
+    width: 23px;
+  }
+}
+
+.social__svg--facebook {
+  height: 22px;
+  width: 22px;
+
+  @media @tablet {
+    margin-right: 50px;
+    height: 32px;
+    width: 28px;
+    margin-top: -4px;
+  }
 }
 
 .page-footer__copyright {
-  display: flex;
-  justify-content: space-between;
-  min-height: 78px;
-  align-items: center;
   border-top: 1px solid @basic-primary-border;
 
   @media @tablet {
@@ -73,11 +130,31 @@
   }
 
   @media @desktop {
+    padding-top: 11px;
     padding-left: 244px;
   }
 }
 
+.copyright__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 22px;
+
+  @media @tablet {
+    padding-top: 56px;
+  }
+
+  @media @desktop {
+    padding-top: 49px;
+  }
+}
+
 .copyright__text {
+  margin: 0;
   .set-font(16px, 16px, "Arial");
-  margin-top: 10px;
+
+  &:active {
+    color: @basic-dark-hover;
+  }
 }

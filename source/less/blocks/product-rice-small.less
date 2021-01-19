@@ -1,21 +1,26 @@
-.product-rice-small {
+.product-catalog-item {
   .product-common-layout();
 
   @media @desktop {
-    .product-common-margin();
+    margin-bottom: 141px;
   }
 }
 
-.product-rice-small__list {
+.product__list {
   .reset-style-list();
-  .product-common-list-layout();
+  padding-bottom: 11px;
+
+  @media @tablet {
+    border: 0;
+    padding-bottom: 31px;
+  }
 }
 
-.product-rice-small__title {
+.product__title {
   .product-title();
 }
 
-.product-catalog-img {
+.product__img {
   width: 140px;
   height: 112px;
   transform: translateY(19px);
@@ -33,14 +38,14 @@
   }
 }
 
-.product-rice-small__list-row {
+.product__list-row {
   .product-description-container();
 }
 
-.product-rice-small__list-value {
+.product__list-value {
   .product-description();
 }
 
-.product-rice-small__link {
+.product__link {
   .product-link-layout();
 }

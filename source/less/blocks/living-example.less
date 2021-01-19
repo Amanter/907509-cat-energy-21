@@ -1,19 +1,38 @@
-.living-example__wrapper {
-  .wrapper();
+.living-example {
+  position: relative;
   background-color: @basic-grey-background;
 
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    width: 100%;
+    border-bottom: 1px solid @basic-primary-border;
+
+    @media @desktop {
+      border: 0;
+    }
+  }
+
   @media @tablet {
-    background: linear-gradient(to bottom, @basic-white 0%, @basic-white 57%, @basic-grey-background 57%);
+    background: linear-gradient(to bottom, @basic-white 0%, @basic-white 57.3%, @basic-grey-background 57.3%);
   }
 
   @media @desktop {
+    background: linear-gradient(180deg, @basic-white 159px, transparent 0%), linear-gradient(270deg, @basic-grey-background 30%, @basic-primary-grey 0%);
+  }
+}
+
+.living-example__wrapper {
+  .wrapper();
+
+  @media @desktop {
     display: flex;
-    background: linear-gradient(to bottom, @basic-white 0%, @basic-white 25.6%, @basic-grey-background 25.6%);
+    background: linear-gradient(180deg, @basic-white 159px, transparent 0%), linear-gradient(270deg, @basic-grey-background 394px, @basic-primary-grey 0%);
   }
 }
 
 .living-example__title {
-  position: relative;
   padding-top: 27px;
   padding-bottom: 33px;
   margin: 0;
@@ -23,19 +42,6 @@
     padding-top: 44px;
     padding-bottom: 63px;
     .set-font(60px, 60px);
-
-    &::before {
-      position: absolute;
-      content: "";
-      top: 0;
-      left: -4%;
-      width: 766px;
-      border-bottom: 1px solid @basic-primary-border;
-
-      @media @desktop {
-        border: 0;
-      }
-    }
   }
 
   @media @desktop {
@@ -46,7 +52,7 @@
 
 .living-example__description {
   margin: 0;
-  padding-bottom: 38px;
+  padding-bottom: 39px;
   .set-font(@font-primary: "Arial");
 
   @media @tablet {
@@ -90,7 +96,7 @@
   position: relative;
 }
 
-.living_example__value {
+.living-example__value {
   margin: 0;
   text-transform: uppercase;
   .set-font(24px, 24px);
@@ -139,7 +145,7 @@
       width: 124px;
       height: 56px;
       border: 1px solid @special-primary-grey;
-      border-radius: 5px;
+      border-radius: 2px;
 
       @media @tablet {
         top: -30%;
@@ -173,7 +179,7 @@
 
   @media @desktop {
     top: 95%;
-    background-color: @basic-grey-background;
+    background-color: @basic-primary-grey;
   }
 
   &--weight {
@@ -211,8 +217,15 @@
   @media @desktop {
     padding-left: 0;
     width: auto;
-    white-space: pre-wrap;
     text-align: start;
+  }
+}
+
+.living-example__price-text {
+  padding-left: 4px;
+
+  @media @desktop {
+    padding-left: 59px;
   }
 }
 
@@ -332,6 +345,14 @@
         left: 7.4%;
       }
     }
+
+    &:hover::before {
+      border-bottom: 1px solid @special-primary-grey;
+    }
+
+    &:active::before {
+      display: none;
+    }
   }
 
   @media @desktop {
@@ -367,9 +388,18 @@
       right: 0.5%;
     }
   }
+
+  &:hover::after {
+    border-bottom: 1px solid @special-primary-grey;
+  }
+
+  &:active::after {
+    display: none;
+  }
 }
 
 .living-example__scale {
+  position: relative;
   margin-top: 33px;
   margin-left: 5px;
   padding-top: 3px;
@@ -401,13 +431,32 @@
   border-radius: 3px;
 
   @media @tablet {
-    transform: translate(560%, -50%);
+    position: absolute;
+    content: "";
+    top: -16px;
+    left: 44.7%;
     height: 34px;
     width: 34px;
     border: 13px solid @basic-white;
     background-color: @basic-green;
     border-radius: 17px;
-    box-shadow: 0 0 4px 2px @special-primary-grey;
+    box-shadow: 0 2px 4px 1px @special-primary-grey;
     cursor: pointer;
+
+    &:hover {
+      box-shadow: 0 4px 4px 1px @special-primary-grey;
+    }
+
+    &:active::after {
+      position: absolute;
+      content: "";
+      top: -13px;
+      left: -163.3%;
+      height: 34px;
+      width: 34px;
+      border-radius: 17px;
+      box-shadow: 0 3px 3px 1px @special-primary-grey;
+      border: 1px solid @basic-green;
+    }
   }
 }

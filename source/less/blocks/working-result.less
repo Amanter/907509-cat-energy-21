@@ -77,6 +77,26 @@
     background: url("../img/icon-green-leaf.svg") 50% 50% no-repeat;
     width: 60px;
     height: 60px;
+
+    @media @tablet {
+      top: 18%;
+      width: 80px;
+      height: 81px;
+    }
+  }
+
+  &--nutriteous::after {
+    @media @tablet {
+      content: "1";
+      position: absolute;
+      width: 70px;
+      height: 230px;
+      top: 7px;
+      left: 120px;
+      .set-font(281px, 281px);
+      color: @basic-primary-grey;
+      z-index: -1;
+    }
   }
 
   &--powder {
@@ -100,6 +120,35 @@
     background: url("../img/icon-green-wash.svg") 50% 50% no-repeat;
     width: 60px;
     height: 60px;
+
+    @media @tablet {
+      top: 18%;
+      left: 12%;
+      width: 80px;
+      height: 81px;
+    }
+
+    @media @desktop {
+      left: 6%;
+    }
+  }
+
+  &--powder::after {
+    @media @tablet {
+      content: "2";
+      position: absolute;
+      width: 70px;
+      height: 230px;
+      top: 7px;
+      left: 141px;
+      .set-font(281px, 281px);
+      color: @basic-primary-grey;
+      z-index: -1;
+    }
+
+    @media @desktop {
+      left: 129px;
+    }
   }
 
   &--replacement {
@@ -121,6 +170,34 @@
     background: url("../img/icon-green-fork.svg") 50% 50% no-repeat;
     width: 60px;
     height: 60px;
+
+    @media @tablet {
+      top: 18%;
+      width: 80px;
+      height: 81px;
+    }
+
+    @media @desktop {
+      left: 14%;
+    }
+  }
+
+  &--replacement::after {
+    @media @tablet {
+      content: "3";
+      position: absolute;
+      width: 70px;
+      height: 230px;
+      top: 7px;
+      left: 114px;
+      .set-font(281px, 281px);
+      color: @basic-primary-grey;
+      z-index: -1;
+    }
+
+    @media @desktop {
+      left: 155px;
+    }
   }
 
   &--change {
@@ -143,5 +220,34 @@
     background: url("../img/icon-green-clock.svg") 50% 50% no-repeat;
     width: 60px;
     height: 60px;
+
+    @media @tablet {
+      top: 18%;
+      left: 10.8%;
+      width: 80px;
+      height: 81px;
+    }
+
+    @media @desktop {
+      left: 20%;
+    }
+  }
+
+  &--change::after {
+    @media @tablet {
+      content: "4";
+      position: absolute;
+      width: 70px;
+      height: 230px;
+      top: 7px;
+      left: 143px;
+      .set-font(281px, 281px);
+      color: @basic-primary-grey;
+      z-index: -1;
+    }
+
+    @media @desktop {
+      left: 176px;
+    }
   }
 }

@@ -6,12 +6,13 @@
   .reset-style-list();
 
   @media @tablet {
-    margin-top: -3px;
+    margin-top: 14px;
   }
 
   @media @desktop {
     display: flex;
     justify-content: space-between;
+    margin-top: 0;
   }
 }
 
@@ -35,14 +36,26 @@
   &--slimming::before {
     position: absolute;
     content: "";
-    top: 21px;
+    top: 22px;
     left: 22px;
-    width: 50px;
-    height: 53px;
-    background: url("../img/cat-back-mobile.svg") 50% 50% no-repeat;
+    width: 51px;
+    height: 54px;
+    background-image: url("../img/cat-back.svg");
+    background-repeat: no-repeat;
+    background-size: 51px auto;
 
     @media @tablet {
-      right: 22px;
+      top: 22.2%;
+      left: 63%;
+      width: 230px;
+      height: 210px;
+      background-size: 200px auto;
+    }
+
+    @media @desktop {
+      top: 11%;
+      left: 9%;
+      background-size: 100px auto;
     }
   }
 
@@ -53,10 +66,22 @@
     left: 13px;
     width: 67px;
     height: 50px;
-    background: url("../img/cat-long-back-mobile.svg") 50% 50% no-repeat;
+    background-image: url("../img/cat-long.svg");
+    background-repeat: no-repeat;
+    background-size: 68px auto;
 
     @media @tablet {
-      right: 22px;
+      top: 24.2%;
+      left: 58.2%;
+      width: 278px;
+      height: 210px;
+      background-size: 270px auto;
+    }
+
+    @media @desktop {
+      top: 12.4%;
+      left: 5.6%;
+      background-size: 137px auto;
     }
   }
 }
@@ -69,14 +94,13 @@
   padding: 20px;
 
   @media @tablet {
-    padding-left: 50px;
-    padding-bottom: 60px;
+    padding: 18px 18px 60px 50px;
     margin-bottom: 30px;
   }
 
   @media @desktop {
+    padding-top: 18px;
     width: 570px;
-    min-height: 374px;
   }
 }
 
