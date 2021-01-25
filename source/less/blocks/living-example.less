@@ -53,12 +53,12 @@
 .living-example__description {
   margin: 0;
   padding-bottom: 39px;
-  .set-font(@font-primary: "Arial");
+  font-family: @font-secondary;
 
   @media @tablet {
     width: 678px;
     padding-bottom: 69px;
-    .set-font(16px, 24px, @font-primary: "Arial");
+    .set-font(16px, 24px, @font-secondary);
   }
 
   @media @desktop {
@@ -168,13 +168,13 @@
   padding-left: 3px;
   padding-right: 5px;
   text-align: center;
-  .set-font(12px, 12px, "Arial");
+  .set-font(12px, 12px, @font-secondary);
   background-color: @basic-grey-background;
 
   @media @tablet {
     top: 70%;
     background-color: @basic-white;
-    .set-font(14px, 14px, "Arial");
+    .set-font(14px, 14px, @font-secondary);
   }
 
   @media @desktop {

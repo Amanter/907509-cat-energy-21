@@ -109,7 +109,7 @@
   margin: 0;
   padding-top: 31px;
   padding-bottom: 40px;
-  .set-font(@font-primary: "Arial");
+  font-family: @font-secondary;
 
   &::before {
     position: absolute;
@@ -127,7 +127,7 @@
   @media @tablet {
     padding: 24px 0 57px 3px;
     margin: 0;
-    .set-font(16px, 24px, "Arial");
+    .set-font(16px, 24px, @font-secondary);
   }
 
   @media @desktop {
@@ -136,7 +136,7 @@
   }
 }
 
-.advantages-description--slimming {
+.advantages__description--slimming {
   @media @tablet {
     width: 385px;
   }
@@ -146,7 +146,7 @@
   }
 }
 
-.advantages-description--weight {
+.advantages__description--weight {
   @media @tablet {
     width: 345px;
   }

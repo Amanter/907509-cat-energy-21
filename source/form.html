@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
+    <link rel="preload" href="fonts/oswaldregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body class="page__body">
@@ -45,10 +46,11 @@
                 <h2 class="selection-program__title">Подбор программы</h2>
                 <p class="selection-program__form-text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
                 <div class="selection-program__secection-container">
-                  <label class="selection-program__cat" for="cat-name-field">Имя:*</label>
-                  <input class="selection-program__cat-name-input selection-program__cat--error selection-program-input" type="text" name="cat-name" id="cat-name-field" placeholder="Барсик" required>
+                  <label class="selection-program__cat" for="cat-name-field">Имя:*
+                    <input class="selection-program__cat-name-input selection-program-input selection-program-input--error" type="text" name="cat-name" id="cat-name-field" placeholder="Барсик" required>
+                  </label>
                   <label class="selection-program__cat" for="cat-weight-field">Вес (кг):*
-                    <input class="selection-program__cat-weight-input selection-program__cat--error selection-program-input" type="text" name="cat-weight" id="cat-weight-field" placeholder="7" required>
+                    <input class="selection-program__cat-weight-input selection-program-input selection-program-input--error" type="text" name="cat-weight" id="cat-weight-field" placeholder="7" required>
                   </label>
                   <label class="selection-program__cat" for="cat-age-field">Возраст (лет):
                     <input class="selection-program__cat-age-input selection-program-input" type="text" name="cat-age" id="cat-age-field" placeholder="7">
@@ -79,15 +81,15 @@
               <div class="selection-program__container-contact-details">
                 <div class="selection-program__container-mail">
                   <label class="selection-program__mail" for="mail">E-mail:*</label>
-                  <input class="selection-program__mail-input selection-program__cat--error selection-program-input" type="text" name="contact-mail" id="mail" placeholder="kuklachev@gmail.com" required>
-                  <svg class="selection-program__icon-mail" width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <input class="selection-program__mail-input selection-program-input selection-program-input--error" type="text" name="contact-mail" id="mail" placeholder="kuklachev@gmail.com" required>
+                  <svg class="selection-program__icon-mail" width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Иконка e-mail адреса">
                     <use xlink:href="img/sprite.svg#icon-email"></use>
                   </svg>
                 </div>
                 <div class="selection-program__container-phone">
                   <label class="selection-program__phone" for="phone">Телефон:*</label>
-                  <input class="selection-program__phone-input selection-program__cat--error selection-program-input" type="text" name="contact-phone" id="phone" placeholder="8 (960) 900-60-90" required>
-                  <svg class="selection-program__icon-phone" width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <input class="selection-program__phone-input selection-program-input selection-program-input--error" type="text" name="contact-phone" id="phone" placeholder="8 (960) 900-60-90" required>
+                  <svg class="selection-program__icon-phone" width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Иконка телефона">
                     <use xlink:href="img/sprite.svg#icon-phone"></use>
                   </svg>
                 </div>
@@ -166,33 +168,33 @@
         <a class="page-footer__logo">
           <img class="page-footer__img-logo" src="img/footer-logo.svg" width="192" height="66" alt="логотип Кэт энерджи">
         </a>
-        <ul class="social__list">
+        <ul class="page-footer__list social">
           <li class="social__item">
             <a class="social__link" href="https://vk.com/">
-              <svg class="social__svg social__svg--vk" width="23" height="16" viewBox="0 0 23 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg class="social__svg social__svg--vk" width="23" height="16" viewBox="0 0 23 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="В контакте">
                 <use xlink:href="img/sprite.svg#icon-vk"></use>
               </svg>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link" href="https://www.instagram.com">
-              <svg class="social__svg social__svg--insta" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg class="social__svg social__svg--insta" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Инстаграмм">
                 <use xlink:href="img/sprite.svg#icon-instagram"></use>
               </svg>
             </a>
           </li>
           <li class="social__item">
             <a class="social__link social__link--facebook" href="https://www.facebook.com">
-              <svg class="social__svg social__svg--facebook" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg class="social__svg social__svg--facebook" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Фейсбук">
                 <use xlink:href="img/sprite.svg#icon-facebook"></use>
               </svg>
             </a>
           </li>
         </ul>
         <div class="page-footer__copyright">
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-            <p class="copyright__text">HTML Academy</p>
-            <svg class="page-footer__copyrigh-svg social__svg " width="27" height="34" viewBox="0 0 27 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <a class="page-footer__link" href="https://htmlacademy.ru/intensive/adaptive">
+            <p class="page-footer__text">HTML Academy</p>
+            <svg class="page-footer__copyrigh-svg" width="27" height="34" viewBox="0 0 27 34" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="логотип HTML Academy">
               <use xlink:href="img/sprite.svg#htmlacademy-logo"></use>
             </svg>
           </a>

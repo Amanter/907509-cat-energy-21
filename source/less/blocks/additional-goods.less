@@ -16,7 +16,7 @@
     z-index: -1;
 
     @media @tablet {
-      top: 9%;
+      top: 8.2%;
       right: 0;
     }
 
@@ -131,7 +131,7 @@
     border-top: 1px solid @basic-grey;
 
     @media @tablet {
-      border: 0;
+      display: none;
     }
   }
 }
@@ -146,10 +146,10 @@
   margin: 0;
   padding-top: 13px;
   padding-bottom: 5px;
-  .set-font(14px, 14px, "Arial");
+  .set-font(14px, 14px, @font-secondary);
 
   @media @tablet {
-    .set-font(16px, 20px, "Arial");
+    .set-font(16px, 20px, @font-secondary);
   }
 }
 
@@ -193,7 +193,7 @@
   }
 }
 
-.additional-goods--border {
+.additional-goods__item--border {
   position: relative;
 
   @media @desktop {
@@ -215,7 +215,7 @@
   width: 220px;
   padding-left: 56px;
   margin: 0;
-  .set-font(16px, 20px, "Arial");
+  .set-font(16px, 20px, @font-secondary);
   color: @basic-white;
   text-align: center;
 
@@ -236,11 +236,13 @@
 
 .additional-goods__background {
   position: relative;
-  min-height: 328px;
+  height: 288px;
   margin-bottom: -5px;
-  margin-top: 57px;
+  margin-top: 58px;
   background-image: url("../img/gift-photo-mobile.jpg");
   background-repeat: no-repeat;
+  margin-bottom: 35px;
+  background-size: contain;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/gift-photo-mobile-2x.jpg");
@@ -248,7 +250,7 @@
 
   @media @tablet {
     width: 708px;
-    min-height: 200px;
+    height: 200px;
     margin-bottom: 76px;
     margin-top: 67px;
     background-size: cover;
@@ -261,7 +263,7 @@
 
   @media @desktop {
     width: 245px;
-    min-height: 289px;
+    height: 289px;
     margin-bottom: 85px;
     margin-top: 2px;
     background-image: url("../img/gift-photo-desktop.jpg");
@@ -274,7 +276,7 @@
   &::before {
     position: absolute;
     content: "";
-    top: 18%;
+    top: 20%;
     left: 36.5%;
     width: 69px;
     height: 69px;

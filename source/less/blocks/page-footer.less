@@ -7,14 +7,15 @@
 }
 
 .page-footer__wrapper--layout {
-  min-height: 236px;
+  min-height: 238px;
   display: block;
-  margin-top: -2px;
 
   @media @tablet {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    min-height: 153px;
+    padding-top: 11px;
+    min-height: 160px;
+    align-items: center;
   }
 }
 
@@ -22,12 +23,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 83px;
-  padding-top: 25px;
+  padding-top: 40px;
+  padding-bottom: 31px;
 
   @media @tablet {
+    padding-top: 6px;
     justify-content: start;
-    padding-top: 0;
+    align-items: unset;
   }
 }
 
@@ -44,80 +46,23 @@
   }
 }
 
-.social__list {
+.page-footer__list {
   display: flex;
-  padding-left: 26px;
-  padding-top: 17px;
+  padding: 17px 0 20px 26px;
+  padding-bottom: 20px;
   align-items: center;
   flex-wrap: wrap;
   border-top: 1px solid @basic-primary-border;
-  min-height: 48px;
   justify-content: center;
   list-style: none;
+  margin: 0;
 
 
   @media @tablet {
-    height: 100%;
     padding-left: 42px;
-    padding-top: 46px;
     align-items: stretch;
     border: 0;
-  }
-
-  @media @desktop {
-    padding-top: 49px;
-  }
-}
-
-.social__link {
-  margin-right: 33px;
-
-  @media @tablet {
-    margin-right: 0;
-  }
-}
-
-.social__svg {
-  &:hover {
-    color: @basic-green;
-  }
-
-  &:active {
-    opacity: 0.6;
-  }
-}
-
-.social__svg--vk {
-  height: 16px;
-  width: 23px;
-
-  @media @tablet {
-    margin-right: 26px;
-    height: 22px;
-    width: 30px;
-  }
-}
-
-.social__svg--insta {
-  height: 16px;
-  width: 16px;
-
-  @media @tablet {
-    margin-right: 21px;
-    height: 23px;
-    width: 23px;
-  }
-}
-
-.social__svg--facebook {
-  height: 22px;
-  width: 22px;
-
-  @media @tablet {
-    margin-right: 50px;
-    height: 32px;
-    width: 28px;
-    margin-top: -4px;
+    padding-top: 0;
   }
 }
 
@@ -135,26 +80,41 @@
   }
 }
 
-.copyright__link {
+.page-footer__copyrigh-svg {
+  &:hover {
+    color: @basic-green;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  @media @tablet {
+    margin-top: -8px;
+  }
+}
+
+.page-footer__link {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-top: 22px;
 
   @media @tablet {
-    padding-top: 56px;
-  }
-
-  @media @desktop {
-    padding-top: 49px;
+    align-items: unset;
+    padding-top: 0;
   }
 }
 
-.copyright__text {
+.page-footer__text {
   margin: 0;
-  .set-font(16px, 16px, "Arial");
+  .set-font(16px, 16px, @font-secondary);
 
   &:active {
     color: @basic-dark-hover;
+  }
+
+  @media @tablet {
+    padding-bottom: 29px;
   }
 }

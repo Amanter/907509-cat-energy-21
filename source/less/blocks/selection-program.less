@@ -96,6 +96,12 @@
   }
 }
 
+.selection-program__cat .selection-program__cat-name-input {
+  @media @tablet {
+    margin-top: 14px;
+  }
+}
+
 .selection-program__cat-weight-input {
   min-width: 204px;
 
@@ -163,7 +169,7 @@
   &::after {
     position: absolute;
     content: "";
-    top: 158px;
+    top: 156px;
     left: -20px;
     height: 1px;
     min-width: 320px;
@@ -346,32 +352,9 @@
   }
 
   @media @desktop {
+    right: 3%;
     top: 25%;
   }
-}
-
-.selection-program__cat--error:invalid {
-  border: 1px solid @status-error;
-}
-
-.selection-program__cat--error:disabled {
-  border: 1px solid @basic-dark;
-}
-
-.selection-program__cat--error:invalid + .selection-program__icon-mail {
-  color: @status-error;
-}
-
-.selection-program__cat--error:disabled + .selection-program__icon-mail {
-  color: @basic-green;
-}
-
-.selection-program__cat--error:invalid + .selection-program__icon-phone {
-  color: @status-error;
-}
-
-.selection-program__cat--error:disabled + .selection-program__icon-phone {
-  color: @basic-green;
 }
 
 .selection-program__mail {
@@ -383,7 +366,7 @@
   }
 }
 
-.selection-program__mail-input {
+.selection-program__mail + .selection-program__mail-input {
   min-width: 219px;
   margin-left: 7px;
   margin-top: 0;
@@ -417,6 +400,10 @@
     right: 8%;
     top: 35%;
   }
+
+  @media @desktop {
+    right: 3%;
+  }
 }
 
 .selection-program__container-phone {
@@ -432,7 +419,7 @@
   }
 }
 
-.selection-program__phone-input {
+.selection-program__phone + .selection-program__phone-input {
   min-width: 204px;
   margin-top: 16px;
   margin-left: 6px;
@@ -732,13 +719,13 @@
 
 .selection-program__required {
   margin: 20px 0 32px 62px;
-  .set-font(@font-primary: "Arial");
+  font-family: @font-secondary;
 
   @media @tablet {
     margin: 0;
     padding-left: 64px;
     padding-top: 60px;
-    .set-font(16px, 16px, "Arial");
+    .set-font(16px, 16px, @font-secondary);
   }
 
   @media @desktop {

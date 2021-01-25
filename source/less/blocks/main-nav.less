@@ -1,0 +1,166 @@
+.main-nav {
+  margin-left: auto;
+}
+
+.main-nav__toggle {
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  z-index: 2;
+  cursor: pointer;
+  border: none;
+}
+
+.main-nav--closed .main-nav__toggle::before {
+  position: absolute;
+  content: "";
+  top: 3px;
+  left: -4px;
+  width: 24px;
+  height: 2px;
+  background-color: @basic-dark;
+  box-shadow: 0 8px 0 0 @basic-dark, 0 16px 0 0 @basic-dark;
+}
+
+.main-nav--opened .main-nav__toggle {
+  top: 9%;
+  right: 0;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 39%;
+    left: 0;
+    width: 23px;
+    height: 2px;
+    background-color: @basic-dark;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+.main-nav__list {
+  display: flex;
+  flex-direction: column;
+  .reset-style-list();
+
+  @media @tablet {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 44px;
+    min-width: 439px;
+  }
+
+  @media @desktop {
+    padding-top: 75px;
+    min-width: 480px;
+  }
+}
+
+.main-nav__list a {
+  display: block;
+
+  @media @tablet {
+    border: 0;
+  }
+}
+
+.main-nav__item {
+  position: relative;
+  min-height: 66px;
+  text-decoration: none;
+  list-style: none;
+  text-align: center;
+
+  @media @tablet {
+    min-height: auto;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: -20px;
+    width: 320px;
+    height: 1px;
+    border-top: 1px solid @basic-grey-border;
+
+    @media @tablet {
+      display: none;
+    }
+  }
+}
+
+.main-nav__item--active {
+  @media @tablet {
+    border-bottom: 2px solid @basic-green;
+    padding-bottom: 8px;
+  }
+
+  @media @desktop {
+    padding-bottom: 10px;
+  }
+
+  &-border {
+    border-bottom: 2px solid @basic-white;
+  }
+}
+
+.main-nav__item--border {
+  @media @tablet {
+    margin-bottom: 12px;
+  }
+}
+
+.main-nav--closed .main-nav__item {
+  @media @mobile-width-only {
+    display: none;
+  }
+}
+
+.main-nav--nojs .main-nav__toggle {
+  display: none;
+}
+
+.main-nav__link {
+  padding-top: 24px;
+  .set-font(20px, 20px, @set-weight: 500);
+
+  @media @tablet {
+    padding: 0;
+    .set-font(18px, 20px);
+  }
+
+  @media @desktop {
+    .set-font(20px, 20px);
+  }
+}
+
+.main-nav__link--change-color {
+  @media @desktop {
+    color: @basic-white;
+  }
+
+  &:hover {
+    @media @desktop {
+      color: @basic-white-hover-special;
+    }
+  }
+
+  &:active {
+    @media @desktop {
+      color: @basic-white-hover;
+    }
+  }
+}

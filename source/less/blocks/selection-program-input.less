@@ -7,7 +7,13 @@
   margin-top: 14px;
 
   @media @tablet {
+    height: 49px;
     margin-left: 15px;
+    margin-top: 23px;
+  }
+
+  @media @desktop {
+    height: 50px;
   }
 
   &::placeholder {
@@ -27,4 +33,22 @@
   &:focus {
     border: 2px solid @basic-dark;
   }
+}
+
+.selection-program-input--error:invalid {
+  border: 1px solid @status-error;
+}
+
+.selection-program-input--error:disabled {
+  border: 1px solid @basic-dark;
+}
+
+.selection-program-input--error:invalid + .selection-program__icon-mail,
+.selection-program-input--error:invalid + .selection-program__icon-phone {
+  color: @status-error;
+}
+
+.selection-program-input--error:disabled + .selection-program__icon-mail,
+.selection-program-input--error:disabled + .selection-program__icon-phone {
+  color: @basic-green;
 }
